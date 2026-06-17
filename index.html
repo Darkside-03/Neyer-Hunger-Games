@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Neyer Hunger Games: plugin de evento competitivo com distritos, KO, revive, airdrops, loot central, lobby e configuracao completa para servidores Minecraft.">
+  <meta name="description" content="Neyer Hunger Games: plugin de evento competitivo com distritos, KO, revive, airdrops, loot central, lobby e configuração completa para servidores Minecraft.">
   <title>Neyer Hunger Games</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,6 +24,7 @@
 
     <nav class="site-nav" data-nav>
       <a href="#players">Players</a>
+      <a href="#menus">Menus</a>
       <a href="#fluxo">Fluxo</a>
       <a href="#admin">Servidor</a>
       <a href="#comandos">Comandos</a>
@@ -45,7 +46,7 @@
         </p>
         <div class="hero-actions">
           <a class="button primary" href="#players"><i class="fa-solid fa-play"></i> Aprender a jogar</a>
-          <a class="button secondary" href="#admin"><i class="fa-solid fa-sliders"></i> Ver configuracao</a>
+          <a class="button secondary" href="#admin"><i class="fa-solid fa-sliders"></i> Ver configuração</a>
         </div>
       </div>
       <div class="hero-status reveal" aria-label="Resumo do evento">
@@ -60,7 +61,7 @@
         <p class="eyebrow"><i class="fa-solid fa-user-group"></i> Para jogadores</p>
         <h2>Entre em um distrito, sobreviva e ajude sua equipe vencer.</h2>
         <p>
-          O jogador nao precisa aprender dezenas de comandos. O fluxo publico gira em torno de entrar,
+          O jogador não precisa aprender dezenas de comandos. O fluxo público gira em torno de entrar,
           gerenciar distrito, conversar com aliados e usar recursos especiais durante o evento.
         </p>
       </div>
@@ -69,7 +70,7 @@
         <article class="feature-card reveal">
           <i class="fa-solid fa-people-group"></i>
           <h3>Distritos</h3>
-          <p>Crie ou entre em um distrito, aceite convites, veja membros e jogue com tag propria como D1, D2 ou D3.</p>
+          <p>Crie ou entre em um distrito, aceite convites, veja membros e jogue com tag própria como D1, D2 ou D3.</p>
         </article>
         <article class="feature-card reveal">
           <i class="fa-solid fa-comments"></i>
@@ -78,53 +79,118 @@
         </article>
         <article class="feature-card reveal">
           <i class="fa-solid fa-feather"></i>
-          <h3>Pena de Fenix</h3>
-          <p>Reviva aliados mortos do mesmo distrito com item configuravel, cooldown, efeitos e local de retorno.</p>
+          <h3>Pena de Fênix</h3>
+          <p>Reviva aliados mortos do mesmo distrito com item configurável, cooldown, efeitos e local de retorno.</p>
         </article>
         <article class="feature-card reveal">
           <i class="fa-solid fa-eye"></i>
           <h3>Spectate controlado</h3>
           <p>Mortos acompanham aliados vivos pelo menu, sem spectator livre em outros distritos.</p>
         </article>
+        <article class="feature-card reveal">
+          <i class="fa-solid fa-door-open"></i>
+          <h3>Entrada protegida</h3>
+          <p>Jogador sem distrito não entra no mapa. Quem tem distrito aparece no spawn da equipe e aguarda o início.</p>
+        </article>
+        <article class="feature-card reveal">
+          <i class="fa-solid fa-ranking-star"></i>
+          <h3>Ranking e status</h3>
+          <p>O menu mostra informações do evento, estado da partida, distrito, kills, top player e top distrito.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section player-menu-section" id="menus">
+      <div class="section-heading reveal">
+        <p class="eyebrow"><i class="fa-solid fa-table-cells-large"></i> Menus do jogador</p>
+        <h2>Tudo importante fica acessível por interface, sem decorar o plugin inteiro.</h2>
+        <p>
+          O jogador pode abrir o menu principal, cuidar do distrito, aceitar convites, acompanhar ranking
+          e usar recursos de morto ou revive quando a regra permitir.
+        </p>
+      </div>
+
+      <div class="menu-showcase">
+        <article class="menu-card reveal">
+          <span><i class="fa-solid fa-house"></i></span>
+          <h3>Menu principal</h3>
+          <p>Entrada para status do evento, distrito, ranking, loja de ações públicas e atalhos úteis como lobby ou spectate.</p>
+        </article>
+        <article class="menu-card reveal">
+          <span><i class="fa-solid fa-flag"></i></span>
+          <h3>Meu distrito</h3>
+          <p>Mostra tag, líder, membros, convites recebidos e ações como criar, aceitar, sair ou gerenciar quando for líder.</p>
+        </article>
+        <article class="menu-card reveal">
+          <span><i class="fa-solid fa-user-plus"></i></span>
+          <h3>Convites</h3>
+          <p>Líderes convidam jogadores sem distrito. Quem recebe pode aceitar pelo menu ou pelo comando localizado.</p>
+        </article>
+        <article class="menu-card reveal">
+          <span><i class="fa-solid fa-skull-crossbones"></i></span>
+          <h3>Morto e spectate</h3>
+          <p>Quando estiver DEAD, o jogador usa o menu para assistir aliados vivos e parar de assistir quando quiser.</p>
+        </article>
+        <article class="menu-card reveal">
+          <span><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+          <h3>Revive</h3>
+          <p>A Pena de Fênix abre a lista de aliados mortos do distrito e confirma o uso respeitando cooldown e consumo.</p>
+        </article>
+        <article class="menu-card reveal">
+          <span><i class="fa-solid fa-trophy"></i></span>
+          <h3>Ranking</h3>
+          <p>Exibe top jogador, top distrito e estatísticas pessoais para reforçar a competição durante a temporada.</p>
+        </article>
+      </div>
+
+      <div class="example-strip reveal">
+        <div>
+          <strong>Exemplo de chat de distrito</strong>
+          <code>/d vamos pelo rio e esperamos o airdrop</code>
+        </div>
+        <div>
+          <strong>Exemplo de convite</strong>
+          <code>/hg distrito aceitar</code>
+        </div>
       </div>
     </section>
 
     <section class="section flow-section" id="fluxo">
       <div class="section-heading reveal">
         <p class="eyebrow"><i class="fa-solid fa-route"></i> Fluxo do evento</p>
-        <h2>Do lobby ate o campeao, cada fase tem uma regra clara.</h2>
+        <h2>Do lobby até o campeão, cada fase tem uma regra clara.</h2>
       </div>
 
       <div class="timeline">
         <div class="timeline-step reveal">
           <span>01</span>
           <h3>Evento abre</h3>
-          <p>Admin usa <code>/hg open</code>. Jogador sem distrito recebe uma mensagem amigavel e nao entra no jogo.</p>
+          <p>Admin usa <code>/hg open</code>. Jogador sem distrito recebe uma mensagem amigável e não entra no jogo.</p>
         </div>
         <div class="timeline-step reveal">
           <span>02</span>
           <h3>Entrada no mapa</h3>
-          <p>No novo fluxo, quem ja tem distrito entra direto no spawn do distrito e aguarda o inicio.</p>
+          <p>No novo fluxo, quem já tem distrito entra direto no spawn do distrito e aguarda o início.</p>
         </div>
         <div class="timeline-step reveal">
           <span>03</span>
-          <h3>Inicio do dia</h3>
+          <h3>Início do dia</h3>
           <p><code>/hg startday</code> inicia countdown, sons e libera o combate quando a contagem termina.</p>
         </div>
         <div class="timeline-step reveal">
           <span>04</span>
           <h3>Continuidade</h3>
-          <p>Se o jogador sair durante o jogo e voltar, deve retornar na ultima posicao salva.</p>
+          <p>Se o jogador sair durante o jogo e voltar, deve retornar na última posição salva.</p>
         </div>
         <div class="timeline-step reveal">
           <span>05</span>
           <h3>Fim de dia</h3>
-          <p><code>/hg endday</code> salva posicoes, avisa mapa e lobby, e envia todos para aguardar o proximo dia.</p>
+          <p><code>/hg endday</code> salva posições, avisa mapa e lobby, e envia todos para aguardar o próximo dia.</p>
         </div>
         <div class="timeline-step reveal">
           <span>06</span>
-          <h3>Vitoria</h3>
-          <p>O ultimo distrito vivo vence. A mensagem aparece no mapa e no lobby antes da transferencia final.</p>
+          <h3>Vitória</h3>
+          <p>O último distrito vivo vence. A mensagem aparece no mapa e no lobby antes da transferência final.</p>
         </div>
       </div>
     </section>
@@ -132,43 +198,82 @@
     <section class="section admin-section" id="admin">
       <div class="section-heading reveal">
         <p class="eyebrow"><i class="fa-solid fa-server"></i> Para donos de servidor</p>
-        <h2>Configuracao forte para evento serio.</h2>
+        <h2>Configuração forte para evento sério.</h2>
         <p>
-          O plugin trabalha em servidor unico ou rede com lobby e mapa, usando estado persistente,
+          O plugin trabalha em servidor único ou rede com lobby e mapa, usando estado persistente,
           idioma global, comandos localizados e menus administrativos.
         </p>
       </div>
 
       <div class="admin-layout">
         <div class="config-panel reveal">
-          <div class="panel-tabs" role="tablist" aria-label="Categorias de configuracao">
+          <div class="panel-tabs" role="tablist" aria-label="Categorias de configuração">
             <button class="tab active" type="button" data-tab="gameplay">Gameplay</button>
             <button class="tab" type="button" data-tab="network">Rede</button>
             <button class="tab" type="button" data-tab="custom">Custom</button>
           </div>
 
           <div class="tab-panel active" data-panel="gameplay">
-            <ul class="check-list">
-              <li><i class="fa-solid fa-check"></i> Ciclo <code>CLOSED</code>, <code>OPEN</code>, <code>RUNNING</code> e <code>DAY_ENDED</code>.</li>
-              <li><i class="fa-solid fa-check"></i> PvP geral, fogo amigo, contagens e fechamento por dia.</li>
-              <li><i class="fa-solid fa-check"></i> Zona de morte, revive, KO, espectador e vencedor por distrito.</li>
-            </ul>
+            <div class="detail-grid">
+              <article>
+                <h4>Ciclo do evento</h4>
+                <p><code>CLOSED</code>, <code>OPEN</code>, <code>RUNNING</code> e <code>DAY_ENDED</code> controlam entrada, combate e continuidade.</p>
+              </article>
+              <article>
+                <h4>Regras de combate</h4>
+                <p>PvP geral, fogo amigo, countdown de início, finalização do dia e proteção de jogadores fora da fase correta.</p>
+              </article>
+              <article>
+                <h4>Morte e revive</h4>
+                <p>Zona de morte, KO com ReanimateMC, espectador controlado, Pena de Fênix e detecção do último distrito vivo.</p>
+              </article>
+              <article>
+                <h4>Continuidade</h4>
+                <p>Novo evento limpa estado antigo; dias seguintes preservam vivos, mortos e posição salva conforme o fluxo definido.</p>
+              </article>
+            </div>
           </div>
 
           <div class="tab-panel" data-panel="network">
-            <ul class="check-list">
-              <li><i class="fa-solid fa-check"></i> Modo <code>LOBBY</code> para entrada e controle remoto.</li>
-              <li><i class="fa-solid fa-check"></i> Modo <code>GAME</code> para mapa, arena, loot e mortes.</li>
-              <li><i class="fa-solid fa-check"></i> MySQL compartilhado entre lobby e mapa; SQLite para teste isolado.</li>
-            </ul>
+            <div class="detail-grid">
+              <article>
+                <h4>Servidor lobby</h4>
+                <p>Recebe jogadores, executa <code>/hg join</code>, mostra mensagens de evento e pode controlar abertura e dias.</p>
+              </article>
+              <article>
+                <h4>Servidor mapa</h4>
+                <p>Executa arena, spawns, loot central, airdrops, mortes, revive, spectate e fechamento local.</p>
+              </article>
+              <article>
+                <h4>Persistência</h4>
+                <p>MySQL compartilha estado entre lobby e mapa. SQLite serve para testes ou servidor único.</p>
+              </article>
+              <article>
+                <h4>Proxy</h4>
+                <p>Configuração para Bungee/Velocity com nomes reais de <code>proxy.lobby-server</code> e <code>proxy.game-server</code>.</p>
+              </article>
+            </div>
           </div>
 
           <div class="tab-panel" data-panel="custom">
-            <ul class="check-list">
-              <li><i class="fa-solid fa-check"></i> Mensagens e GUIs em <code>en_US</code>, <code>pt_BR</code> e <code>pl_PL</code>.</li>
-              <li><i class="fa-solid fa-check"></i> Loot central e airdrop editaveis pelo menu e pelo <code>config.yml</code>.</li>
-              <li><i class="fa-solid fa-check"></i> Placeholders para scoreboards, TAB, ranking e status do evento.</li>
-            </ul>
+            <div class="detail-grid">
+              <article>
+                <h4>Idiomas</h4>
+                <p>Mensagens, títulos, botões, lores e comandos localizados em <code>en_US</code>, <code>pt_BR</code> e <code>pl_PL</code>.</p>
+              </article>
+              <article>
+                <h4>Menus</h4>
+                <p><code>guis.yml</code> controla materiais, slots e ações sem recriar o plugin.</p>
+              </article>
+              <article>
+                <h4>Loot</h4>
+                <p>Chance, quantidade mínima, máximo por stack, slots por baú e tabelas separadas para centro e airdrop.</p>
+              </article>
+              <article>
+                <h4>Placeholders</h4>
+                <p>Status, PvP, vivos, distritos, tempo, ranking, próximo airdrop e vencedor para TAB/scoreboard.</p>
+              </article>
+            </div>
           </div>
         </div>
 
@@ -184,21 +289,63 @@
       </div>
     </section>
 
+    <section class="section owner-tools-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow"><i class="fa-solid fa-screwdriver-wrench"></i> Administração no jogo</p>
+        <h2>O dono configura a maior parte pelo menu admin e usa arquivos para ajustes finos.</h2>
+      </div>
+
+      <div class="owner-grid">
+        <article class="owner-card reveal">
+          <i class="fa-solid fa-sliders"></i>
+          <h3>Menu admin</h3>
+          <p>Controle do evento, PvP, configurações de gameplay, spawns, loot central, airdrops, rankings e atalhos de reload.</p>
+        </article>
+        <article class="owner-card reveal">
+          <i class="fa-solid fa-map-location-dot"></i>
+          <h3>Spawns e zona</h3>
+          <p>Defina spawns de distritos, liste/remova pontos antigos, salve zona de morte e corrija mapa sem acessar o banco.</p>
+        </article>
+        <article class="owner-card reveal">
+          <i class="fa-solid fa-boxes-stacked"></i>
+          <h3>Baús centrais</h3>
+          <p>Cadastre baús, liste por número, limpe registros antigos, force refill e edite itens por chance e quantidade.</p>
+        </article>
+        <article class="owner-card reveal">
+          <i class="fa-solid fa-parachute-box"></i>
+          <h3>Airdrops</h3>
+          <p>Configure centro, raio, intervalo, loot separado, tempo de coleta e o novo visual com apenas feixe acima do baú.</p>
+        </article>
+        <article class="owner-card reveal">
+          <i class="fa-solid fa-file-lines"></i>
+          <h3>config.yml</h3>
+          <p>Servidor, banco, proxy, jogo, PvP, chat, distritos, loot, dead zone, Pena de Fênix, airdrop, hooks e borda.</p>
+        </article>
+        <article class="owner-card reveal">
+          <i class="fa-solid fa-language"></i>
+          <h3>lang e guis.yml</h3>
+          <p>Textos, comandos, títulos, botões e lores são customizáveis; novas chaves são mescladas sem apagar alterações.</p>
+        </article>
+      </div>
+    </section>
+
     <section class="section commands-section" id="comandos">
       <div class="section-heading reveal">
         <p class="eyebrow"><i class="fa-solid fa-terminal"></i> Comandos essenciais</p>
-        <h2>Um comando raiz, funcoes separadas por permissao.</h2>
+        <h2>Um comando raiz, funções separadas por permissão.</h2>
       </div>
 
       <div class="command-columns">
         <div class="command-block reveal">
-          <h3>Publicos</h3>
+          <h3>Públicos</h3>
           <button class="copy-line" data-copy="/hg"><code>/hg</code><span>Abre menu principal</span></button>
           <button class="copy-line" data-copy="/hg join"><code>/hg join</code><span>Entrar no evento pelo lobby</span></button>
-          <button class="copy-line" data-copy="/hg distrito criar"><code>/hg distrito criar</code><span>Criar distrito automatico</span></button>
+          <button class="copy-line" data-copy="/hg distrito criar"><code>/hg distrito criar</code><span>Criar distrito automático</span></button>
           <button class="copy-line" data-copy="/hg distrito aceitar"><code>/hg distrito aceitar</code><span>Aceitar convite</span></button>
           <button class="copy-line" data-copy="/d mensagem"><code>/d mensagem</code><span>Chat privado do distrito</span></button>
           <button class="copy-line" data-copy="/hg spectate"><code>/hg spectate</code><span>Assistir aliado vivo quando morto</span></button>
+          <button class="copy-line" data-copy="/hg distrito info"><code>/hg distrito info</code><span>Ver informações do próprio distrito</span></button>
+          <button class="copy-line" data-copy="/hg distrito sair"><code>/hg distrito sair</code><span>Sair do distrito quando permitido</span></button>
         </div>
 
         <div class="command-block reveal">
@@ -208,7 +355,9 @@
           <button class="copy-line" data-copy="/hg startday"><code>/hg startday</code><span>Iniciar o dia</span></button>
           <button class="copy-line" data-copy="/hg endday"><code>/hg endday</code><span>Finalizar o dia</span></button>
           <button class="copy-line" data-copy="/hg setdeadzone"><code>/hg setdeadzone</code><span>Salvar zona dos mortos</span></button>
-          <button class="copy-line" data-copy="/hg chest list"><code>/hg chest list</code><span>Listar baus centrais</span></button>
+          <button class="copy-line" data-copy="/hg chest list"><code>/hg chest list</code><span>Listar baús centrais</span></button>
+          <button class="copy-line" data-copy="/hg set spawn list"><code>/hg set spawn list</code><span>Listar spawns salvos</span></button>
+          <button class="copy-line" data-copy="/hg airdrop spawn"><code>/hg airdrop spawn</code><span>Forçar airdrop manual</span></button>
         </div>
       </div>
     </section>
@@ -217,17 +366,84 @@
       <div class="system-card reveal">
         <i class="fa-solid fa-box-open"></i>
         <h3>Loot central</h3>
-        <p>Baus centrais numerados, refill manual/automatico, chance por item e quantidade minima/maxima por stack.</p>
+        <p>Baús centrais numerados, refill manual/automático, chance por item e quantidade mínima/máxima por stack.</p>
       </div>
       <div class="system-card reveal">
         <i class="fa-solid fa-parachute-box"></i>
         <h3>Airdrops</h3>
-        <p>Airdrops aleatorios com centro, raio, intervalo, loot separado e novo objetivo visual: apenas feixe acima do bau.</p>
+        <p>Airdrops aleatórios com centro, raio, intervalo, loot separado e novo objetivo visual: apenas feixe acima do baú.</p>
       </div>
       <div class="system-card reveal">
         <i class="fa-solid fa-skull"></i>
         <h3>Morte e KO</h3>
-        <p>KO continua vivo; execucao, bleedout ou morte real viram DEAD, disparam estatisticas e checam eliminacao.</p>
+        <p>KO continua vivo; execução, bleedout ou morte real viram DEAD, disparam estatísticas e checam eliminação.</p>
+      </div>
+      <div class="system-card reveal">
+        <i class="fa-solid fa-volume-high"></i>
+        <h3>Countdowns</h3>
+        <p>Contagens para início, fim de dia e automações podem usar títulos, chat e sons para guiar todos os jogadores.</p>
+      </div>
+      <div class="system-card reveal">
+        <i class="fa-solid fa-language"></i>
+        <h3>Três idiomas</h3>
+        <p>Arquivos em inglês, português e polonês com comandos, mensagens, GUI, estados, placeholders e textos de erro.</p>
+      </div>
+      <div class="system-card reveal">
+        <i class="fa-solid fa-chart-simple"></i>
+        <h3>Ranking</h3>
+        <p>Estatísticas de kills, mortes, vitórias, tempo sobrevivido, top player, top distrito e último vencedor.</p>
+      </div>
+      <div class="system-card reveal">
+        <i class="fa-solid fa-shield"></i>
+        <h3>Permissões</h3>
+        <p>Permissões separadas para admin, PvP, distritos, loot, airdrop, revive, dead zone, bypass e comandos públicos.</p>
+      </div>
+      <div class="system-card reveal">
+        <i class="fa-solid fa-plug-circle-bolt"></i>
+        <h3>Integrações</h3>
+        <p>Suporte opcional a PlaceholderAPI, ReanimateMC, TAB, LuckPerms, WorldGuard, WorldEdit e rede com proxy.</p>
+      </div>
+    </section>
+
+    <section class="section examples-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow"><i class="fa-solid fa-flask"></i> Exemplos prontos</p>
+        <h2>Textos e configurações que o dono pode usar como base.</h2>
+      </div>
+
+      <div class="example-grid">
+        <article class="code-card reveal">
+          <h3>Mensagem no TAB</h3>
+          <pre><code>NIGHTMARE
+Estado: %hungergames_state%
+Vivos: %hungergames_alive_players%
+Distritos: %hungergames_alive_districts%
+Airdrop: %hungergames_next_airdrop%
+Seu distrito: %hungergames_district_tag%</code></pre>
+        </article>
+        <article class="code-card reveal">
+          <h3>Loot central</h3>
+          <pre><code>loot:
+  central:
+    refill-interval-seconds: 300
+    slots-per-chest: 6
+    items:
+      - material: "IRON_SWORD"
+        chance: 0.35
+        min: 1
+        max: 1</code></pre>
+        </article>
+        <article class="code-card reveal">
+          <h3>Airdrop</h3>
+          <pre><code>airdrop:
+  automatic: true
+  interval-minutes: 30
+  min-distance-from-center: 100
+  max-distance-from-center: 1000
+  beam:
+    enabled: true
+    color: "WHITE"</code></pre>
+        </article>
       </div>
     </section>
 
@@ -235,36 +451,77 @@
       <div class="section-heading reveal">
         <p class="eyebrow"><i class="fa-solid fa-code"></i> Scoreboard e TAB</p>
         <h2>Placeholders prontos para mostrar o evento ao vivo.</h2>
+        <p>Use com PlaceholderAPI em scoreboards, TAB, hologramas e qualquer plugin compatível.</p>
       </div>
 
       <div class="placeholder-grid">
-        <code class="reveal">%hungergames_state%</code>
-        <code class="reveal">%hungergames_pvp%</code>
-        <code class="reveal">%hungergames_alive_players%</code>
-        <code class="reveal">%hungergames_alive_districts%</code>
-        <code class="reveal">%hungergames_next_airdrop%</code>
-        <code class="reveal">%hungergames_game_time%</code>
-        <code class="reveal">%hungergames_district%</code>
-        <code class="reveal">%hungergames_district_tag%</code>
-        <code class="reveal">%hungergames_kills%</code>
-        <code class="reveal">%hungergames_winner_district%</code>
+        <article class="placeholder-card reveal">
+          <code>%hungergames_state%</code>
+          <p>Estado traduzido do evento: fechado, aberto, rodando ou dia finalizado.</p>
+        </article>
+        <article class="placeholder-card reveal">
+          <code>%hungergames_pvp%</code>
+          <p>Mostra se o PvP está ativado ou desativado no estado persistente.</p>
+        </article>
+        <article class="placeholder-card reveal">
+          <code>%hungergames_alive_players%</code>
+          <p>Quantidade de jogadores vivos na partida atual.</p>
+        </article>
+        <article class="placeholder-card reveal">
+          <code>%hungergames_alive_districts%</code>
+          <p>Quantidade de distritos que ainda possuem jogadores vivos.</p>
+        </article>
+        <article class="placeholder-card reveal">
+          <code>%hungergames_next_airdrop%</code>
+          <p>Tempo formatado até o próximo airdrop automático.</p>
+        </article>
+        <article class="placeholder-card reveal">
+          <code>%hungergames_game_time%</code>
+          <p>Tempo de jogo desde o início do dia atual.</p>
+        </article>
+        <article class="placeholder-card reveal">
+          <code>%hungergames_district%</code>
+          <p>Nome visual do distrito do jogador, localizado pelo idioma.</p>
+        </article>
+        <article class="placeholder-card reveal">
+          <code>%hungergames_district_tag%</code>
+          <p>Tag curta do distrito, como D1, D2 ou D3.</p>
+        </article>
+        <article class="placeholder-card reveal">
+          <code>%hungergames_kills%</code>
+          <p>Kills persistentes do jogador.</p>
+        </article>
+        <article class="placeholder-card reveal">
+          <code>%hungergames_winner_district%</code>
+          <p>Último distrito vencedor salvo no banco.</p>
+        </article>
+      </div>
+
+      <div class="tab-example reveal">
+        <h3>Exemplo de linhas para TAB/scoreboard</h3>
+        <pre><code>&amp;bJogos Vorazes
+&amp;fEstado: &amp;e%hungergames_state%
+&amp;fDistrito: &amp;a%hungergames_district_tag%
+&amp;fJogadores vivos: &amp;a%hungergames_alive_players%
+&amp;fDistritos vivos: &amp;a%hungergames_alive_districts%
+&amp;fPróximo airdrop: &amp;e%hungergames_next_airdrop%</code></pre>
       </div>
     </section>
 
     <section class="section faq-section" id="faq">
       <div class="section-heading reveal">
-        <p class="eyebrow"><i class="fa-solid fa-circle-question"></i> Perguntas rapidas</p>
+        <p class="eyebrow"><i class="fa-solid fa-circle-question"></i> Perguntas rápidas</p>
         <h2>O que o player e o dono precisam saber.</h2>
       </div>
 
       <div class="faq-list">
         <details class="faq-item reveal">
           <summary>Jogador sem distrito pode entrar no mapa?</summary>
-          <p>Nao. No fluxo definido para o servidor, ele recebe uma mensagem amigavel e precisa entrar em um distrito antes do <code>/hg join</code>.</p>
+          <p>Não. No fluxo definido para o servidor, ele recebe uma mensagem amigável e precisa entrar em um distrito antes do <code>/hg join</code>.</p>
         </details>
         <details class="faq-item reveal">
-          <summary>Quando as mortes comecam a contar?</summary>
-          <p>Somente durante <code>RUNNING</code>, depois de <code>/hg startday</code>. Antes disso, o evento esta em preparacao.</p>
+          <summary>Quando as mortes começam a contar?</summary>
+          <p>Somente durante <code>RUNNING</code>, depois de <code>/hg startday</code>. Antes disso, o evento está em preparação.</p>
         </details>
         <details class="faq-item reveal">
           <summary>O plugin funciona com lobby e mapa separados?</summary>
@@ -272,7 +529,35 @@
         </details>
         <details class="faq-item reveal">
           <summary>O dono pode traduzir mensagens e menus?</summary>
-          <p>Sim. Idiomas e GUIs ficam em arquivos YAML e novas chaves sao mescladas sem sobrescrever customizacoes existentes.</p>
+          <p>Sim. Idiomas e GUIs ficam em arquivos YAML e novas chaves são mescladas sem sobrescrever customizações existentes.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Como o jogador cria um distrito?</summary>
+          <p>Ele usa o menu de distrito ou <code>/hg distrito criar</code>. O plugin cria automaticamente o próximo distrito livre e define o criador como líder.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Como funciona convite de distrito?</summary>
+          <p>O líder convida jogadores sem distrito. O convidado aceita pelo menu ou por <code>/hg distrito aceitar</code>, respeitando limite de membros e expiração.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Qual a diferença entre loot central e airdrop?</summary>
+          <p>Loot central usa baús cadastrados no mapa. Airdrop nasce em local sorteado dentro do raio configurado e usa uma tabela de itens separada.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>O que pode ser alterado pelo menu admin?</summary>
+          <p>Evento, PvP, configurações de gameplay, spawns, baús centrais, loot, airdrops, ranking, distritos e ações de reload.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>O que fica nos arquivos do plugin?</summary>
+          <p><code>config.yml</code> guarda regras e integrações, <code>guis.yml</code> guarda layout dos menus e <code>lang/*.yml</code> guarda textos por idioma.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>ReanimateMC é obrigatório?</summary>
+          <p>Não. Ele é uma integração opcional. Quando instalado, KO continua como vivo e execução/bleedout vira morte real do Hunger Games.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Dá para usar no TAB?</summary>
+          <p>Sim. Com PlaceholderAPI, o TAB pode mostrar estado, jogadores vivos, distritos vivos, próximo airdrop, distrito do jogador e ranking.</p>
         </details>
       </div>
     </section>
@@ -280,8 +565,8 @@
 
   <footer class="site-footer">
     <div>
-      <strong>Neyer Hunger Games</strong>
-      <p>Plugin de evento competitivo para servidores Minecraft com distritos, lobby e arena.</p>
+      <strong>Darkside / kylder_backham</strong>
+      <p>Desenvolvimento especializado de plugins e sistemas para servidores Minecraft.</p>
     </div>
     <a class="button footer-button" href="#inicio"><i class="fa-solid fa-arrow-up"></i> Voltar ao topo</a>
   </footer>
