@@ -3,9 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <title>Neyer Hunger Games</title>
+
+  <style>
+    body {
+      background: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      color: #ff3333;
+    }
+
+    button {
+      background: #ff3333;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background: #cc0000;
+    }
+  </style>
 </head>
 <body>
+
   <h1>Neyer Hunger Games</h1>
-  <p>Meu site está online pelo GitHub Pages.</p>
+  <p>Servidor de Minecraft Hunger Games.</p>
+
+  <button onclick="mostrarMensagem()">Jogar agora</button>
+
+  <p id="mensagem"></p>
+
+  <script>
+    function mostrarMensagem() {
+      document.getElementById("mensagem").innerText = "Em breve: IP do servidor aqui!";
+    }
+  </script>
+
 </body>
 </html>
