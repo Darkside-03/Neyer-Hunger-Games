@@ -305,14 +305,20 @@ h3 {
 
 .feature-grid,
 .placeholder-grid,
-.systems-section {
+.systems-section,
+.menu-showcase,
+.owner-grid,
+.example-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
 
 .feature-card,
 .system-card,
+.menu-card,
+.owner-card,
+.code-card,
 .command-block,
 .config-panel,
 .integration-list,
@@ -325,13 +331,16 @@ h3 {
 }
 
 .feature-card,
-.system-card {
+.system-card,
+.menu-card,
+.owner-card {
   min-height: 225px;
   padding: 1.25rem;
 }
 
 .feature-card i,
-.system-card i {
+.system-card i,
+.owner-card i {
   display: grid;
   place-items: center;
   width: 44px;
@@ -344,6 +353,8 @@ h3 {
 
 .feature-card p,
 .system-card p,
+.menu-card p,
+.owner-card p,
 .timeline-step p,
 .faq-item p,
 .integration-list,
@@ -371,15 +382,14 @@ h3 {
 
 .timeline {
   display: grid;
-  grid-template-columns: repeat(6, minmax(180px, 1fr));
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
   gap: 1rem;
-  overflow-x: auto;
   padding-bottom: 0.2rem;
 }
 
 .timeline-step {
-  min-width: 180px;
-  padding: 1.1rem;
+  min-width: 0;
+  padding: 1.25rem;
 }
 
 .timeline-step span {
@@ -433,6 +443,32 @@ h3 {
 
 .tab-panel.active {
   display: block;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.detail-grid article {
+  min-height: 132px;
+  padding: 0.9rem;
+  border: 1px solid rgba(102, 183, 255, 0.14);
+  border-radius: 8px;
+  background: rgba(5, 7, 13, 0.28);
+}
+
+.detail-grid h4 {
+  margin: 0 0 0.45rem;
+  color: var(--text);
+  font-size: 0.98rem;
+}
+
+.detail-grid p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.62;
 }
 
 .check-list {
@@ -524,6 +560,86 @@ h3 {
 
 .systems-section {
   padding-top: 2rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.player-menu-section {
+  padding-top: 2rem;
+}
+
+.menu-card {
+  background: linear-gradient(180deg, rgba(15, 28, 47, 0.94), rgba(7, 14, 25, 0.96));
+  border: 1px solid rgba(102, 183, 255, 0.18);
+  border-radius: var(--radius);
+}
+
+.menu-card span {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 1rem;
+  color: #051020;
+  background: var(--cyan);
+  border-radius: 8px;
+}
+
+.example-strip {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.example-strip div {
+  min-height: 84px;
+  padding: 1rem;
+  border: 1px solid rgba(102, 183, 255, 0.18);
+  border-radius: 8px;
+  background: rgba(15, 23, 38, 0.8);
+}
+
+.example-strip strong {
+  display: block;
+  margin-bottom: 0.55rem;
+}
+
+.owner-tools-section {
+  padding-top: 2rem;
+}
+
+.owner-card {
+  background: linear-gradient(180deg, rgba(18, 29, 49, 0.94), rgba(11, 17, 29, 0.96));
+  border: 1px solid rgba(102, 183, 255, 0.18);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.examples-section {
+  padding-top: 2rem;
+}
+
+.code-card {
+  padding: 1rem;
+}
+
+.code-card h3 {
+  margin-bottom: 0.8rem;
+}
+
+pre {
+  margin: 0;
+  overflow-x: auto;
+}
+
+pre code {
+  display: block;
+  min-height: 210px;
+  padding: 1rem;
+  white-space: pre;
+  color: #dceaff;
+  background: #07101c;
+  border-color: rgba(102, 183, 255, 0.2);
 }
 
 .placeholder-section {
@@ -551,18 +667,51 @@ h3 {
 }
 
 .placeholder-grid {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.placeholder-grid code {
-  display: flex;
+.placeholder-card {
+  min-height: 118px;
+  padding: 1rem;
+  background: #ffffff;
+  border: 1px solid #cbdcf2;
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(23, 61, 112, 0.08);
+}
+
+.placeholder-card code,
+.tab-example code {
+  display: inline-flex;
   align-items: center;
-  min-height: 52px;
+  color: #061323;
+  background: #edf5ff;
+  border-color: #c2d8f4;
+  overflow-wrap: anywhere;
+}
+
+.placeholder-card p {
+  margin: 0.7rem 0 0;
+  color: #465670;
+  line-height: 1.55;
+}
+
+.tab-example {
+  width: min(100%, var(--container));
+  margin: 1rem auto 0;
+  padding: 1.1rem;
   color: #061323;
   background: #ffffff;
   border: 1px solid #cbdcf2;
-  box-shadow: 0 12px 30px rgba(23, 61, 112, 0.08);
-  overflow-wrap: anywhere;
+  border-radius: 8px;
+}
+
+.tab-example h3 {
+  margin-bottom: 0.8rem;
+}
+
+.tab-example pre code {
+  color: #dceaff;
+  background: #07101c;
 }
 
 .faq-list {
@@ -649,12 +798,15 @@ h3 {
 
 @media (max-width: 1020px) {
   .feature-grid,
-  .systems-section {
+  .systems-section,
+  .menu-showcase,
+  .owner-grid,
+  .example-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .placeholder-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .timeline {
+    grid-template-columns: repeat(2, minmax(270px, 1fr));
   }
 
   .admin-layout {
@@ -714,16 +866,18 @@ h3 {
 
   .command-columns,
   .feature-grid,
-  .systems-section {
+  .systems-section,
+  .menu-showcase,
+  .owner-grid,
+  .example-grid,
+  .example-strip,
+  .detail-grid,
+  .timeline {
     grid-template-columns: 1fr;
   }
 
   .copy-line {
     grid-template-columns: 1fr;
-  }
-
-  .placeholder-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .site-footer {
